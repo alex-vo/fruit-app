@@ -1,6 +1,5 @@
 package controllers;
 
-import assets.GMailAuthenticator;
 import play.api.i18n.Lang;
 import play.i18n.Messages;
 import play.mvc.Controller;
@@ -30,12 +29,12 @@ public class Application extends Controller {
 
     public static Result submitTrial(){
         String phoneOrEmail = request().body().asFormUrlEncoded().get("phoneOrEmail")[0];
-        final String username = "alex.vo92@gmail.com";
-        final String password = "alex37128899747";
+        final String username = "avoroncovs@gmail.com";
+        final String password = "alex28899747";
 
         String host = "smtp.gmail.com";
-        String from = "alex.vo92@gmail.com";
-        String pass = "alex37128899747";
+        String from = "avoroncovs@gmail.com";
+        String pass = "alex28899747";
         Properties props = System.getProperties();
         props.put("mail.smtp.starttls.enable", "true");
         props.put("mail.smtp.host", host);
@@ -45,7 +44,12 @@ public class Application extends Controller {
         props.put("mail.smtp.auth", "true");
         props.put("mail.debug", "true");
 
-        Session session = Session.getInstance(props, new GMailAuthenticator(username, password));
+        Session session = Session.getInstance(props,
+                new javax.mail.Authenticator() {
+                    protected PasswordAuthentication getPasswordAuthentication() {
+                        return new PasswordAuthentication(username, password);
+                    }
+                });
 
         try {
 
@@ -76,12 +80,12 @@ public class Application extends Controller {
         String mandarines = request().body().asFormUrlEncoded().get("mandarines")[0];
         String seasonFruits = request().body().asFormUrlEncoded().get("season_fruits")[0];
         String phoneOrEmail = request().body().asFormUrlEncoded().get("phoneOrEmail")[0];
-        final String username = "alex.vo92@gmail.com";
-        final String password = "alex37128899747";
+        final String username = "avoroncovs@gmail.com";
+        final String password = "alex28899747";
 
         String host = "smtp.gmail.com";
-        String from = "alex.vo92@gmail.com";
-        String pass = "alex37128899747";
+        String from = "avoroncovs@gmail.com";
+        String pass = "alex28899747";
         Properties props = System.getProperties();
         props.put("mail.smtp.starttls.enable", "true");
         props.put("mail.smtp.host", host);
@@ -91,7 +95,12 @@ public class Application extends Controller {
         props.put("mail.smtp.auth", "true");
         props.put("mail.debug", "true");
 
-        Session session = Session.getInstance(props, new GMailAuthenticator(username, password));
+        Session session = Session.getInstance(props,
+                new javax.mail.Authenticator() {
+                    protected PasswordAuthentication getPasswordAuthentication() {
+                        return new PasswordAuthentication(username, password);
+                    }
+                });
 
         try {
 
