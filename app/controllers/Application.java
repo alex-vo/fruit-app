@@ -57,7 +57,7 @@ public class Application extends Controller {
             message.setFrom(new InternetAddress(from));
             message.setRecipients(Message.RecipientType.TO,
                     InternetAddress.parse("avoroncovs@gmail.com"));
-            message.setSubject(Messages.get("new_trial", Lang.get("ru")));
+            message.setSubject(Messages.get("new_trial", Lang.get("ru")), "utf-8");
             message.setText(Messages.get("hello_email", Lang.get("ru"))
                     + "\n\n " + Messages.get("new_trial_message", Lang.get("ru"))
                     + "\n " + Messages.get("phone_or_email", Lang.get("ru")) + ": " + phoneOrEmail, "utf-8");
@@ -108,7 +108,7 @@ public class Application extends Controller {
             message.setFrom(new InternetAddress(from));
             message.setRecipients(Message.RecipientType.TO,
                     InternetAddress.parse("avoroncovs@gmail.com"));
-            message.setSubject(Messages.get("new_order", Lang.get("ru")));
+            message.setSubject(Messages.get("new_order", Lang.get("ru")), "utf-8");
             message.setText(Messages.get("hello_email", Lang.get("ru"))
                     + "\n\n " + Messages.get("new_order_message", Lang.get("ru"))
                     + "\n " + Messages.get("green_apples", Lang.get("ru")) + ": " + greenApples
