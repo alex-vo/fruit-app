@@ -1,5 +1,6 @@
 package controllers;
 
+import assets.GMailAuthenticator;
 import play.api.i18n.Lang;
 import play.i18n.Messages;
 import play.mvc.Controller;
@@ -32,23 +33,24 @@ public class Application extends Controller {
         final String username = "alex.vo92@gmail.com";
         final String password = "alex37128899747";
 
-        Properties props = new Properties();
+        String host = "smtp.gmail.com";
+        String from = "alex.vo92@gmail.com";
+        String pass = "alex37128899747";
+        Properties props = System.getProperties();
         props.put("mail.smtp.starttls.enable", "true");
-        props.put("mail.smtp.auth", "true");
-        props.put("mail.smtp.host", "smtp.gmail.com");
+        props.put("mail.smtp.host", host);
+        props.put("mail.smtp.user", from);
+        props.put("mail.smtp.password", pass);
         props.put("mail.smtp.port", "587");
+        props.put("mail.smtp.auth", "true");
+        props.put("mail.debug", "true");
 
-        Session session = Session.getInstance(props,
-                new javax.mail.Authenticator() {
-                    protected PasswordAuthentication getPasswordAuthentication() {
-                        return new PasswordAuthentication(username, password);
-                    }
-                });
+        Session session = Session.getInstance(props, new GMailAuthenticator(username, password));
 
         try {
 
             Message message = new MimeMessage(session);
-            message.setFrom(new InternetAddress("alex.vo92@gmail.com"));
+            message.setFrom(new InternetAddress("alex-vo@inbox.lv"));
             message.setRecipients(Message.RecipientType.TO,
                     InternetAddress.parse("avoroncovs@gmail.com"));
             message.setSubject(Messages.get("new_trial", Lang.get("ru")));
@@ -77,23 +79,24 @@ public class Application extends Controller {
         final String username = "alex.vo92@gmail.com";
         final String password = "alex37128899747";
 
-        Properties props = new Properties();
+        String host = "smtp.gmail.com";
+        String from = "alex.vo92@gmail.com";
+        String pass = "alex37128899747";
+        Properties props = System.getProperties();
         props.put("mail.smtp.starttls.enable", "true");
-        props.put("mail.smtp.auth", "true");
-        props.put("mail.smtp.host", "smtp.gmail.com");
+        props.put("mail.smtp.host", host);
+        props.put("mail.smtp.user", from);
+        props.put("mail.smtp.password", pass);
         props.put("mail.smtp.port", "587");
+        props.put("mail.smtp.auth", "true");
+        props.put("mail.debug", "true");
 
-        Session session = Session.getInstance(props,
-                new javax.mail.Authenticator() {
-                    protected PasswordAuthentication getPasswordAuthentication() {
-                        return new PasswordAuthentication(username, password);
-                    }
-                });
+        Session session = Session.getInstance(props, new GMailAuthenticator(username, password));
 
         try {
 
             Message message = new MimeMessage(session);
-            message.setFrom(new InternetAddress("alex.vo92@gmail.com"));
+            message.setFrom(new InternetAddress("alex-vo@inbox.lv"));
             message.setRecipients(Message.RecipientType.TO,
                     InternetAddress.parse("avoroncovs@gmail.com"));
             message.setSubject(Messages.get("new_order", Lang.get("ru")));
