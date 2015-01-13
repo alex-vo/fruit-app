@@ -1,279 +1,379 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="en">
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <title>fruit art - free css template</title>
-        <meta name="keywords" content="css template, fruit art, free" />
-        <meta name="description" content="Fruit Art is a free css template provided by templatemo.com" />
-        <link href="templatemo_style.css" rel="stylesheet" type="text/css" />
+        <meta charset="utf-8">
+        <meta name="viewport"    content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="vOne - Free Business HTML5 Responsive Website">
+        <meta name="author" content="webThemez.com">
+        <title>augludarzs.lv - Svaigu augļu piegāde uz birojiem Rīgā</title>
+        <link rel="favicon" href="assets/images/favicon.png">
+        <link rel="stylesheet" media="screen" href="assets/css/open_sans.css">
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+            <!-- Custom styles for our template -->
+        <link rel="stylesheet" href="assets/css/bootstrap-theme.css" media="screen" >
+        <link rel="stylesheet" type="text/css" href="assets/css/da-slider.css" />
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="assets/css/jquery-ui.css">
+            <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+            <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+            <!-- JavaScript libs are placed at the end of the document so the pages load faster -->
+        <script src="assets/js/modernizr-latest.js"></script>
+            <!--<script src="assets/js/jquery.min.js"></script>-->
 
-        <link rel="stylesheet" type="text/css" href="stylesheet/styles.css" />
-
-        <script language="javascript" type="text/javascript" src="script/mootools-1.2.1-core.js"></script>
-        <script language="javascript" type="text/javascript" src="script/mootools-1.2-more.js"></script>
-        <script language="javascript" type="text/javascript" src="script/slideitmoo-1.1.js"></script>
-        <script language="javascript" type="text/javascript">
-        window.addEvents({
-        'domready': function(){
-        /* thumbnails example , div containers */
-        new SlideItMoo({
-        overallContainer: 'SlideItMoo_outer',
-        elementScrolled: 'SlideItMoo_inner',
-        thumbsContainer: 'SlideItMoo_items',
-        itemsVisible: 5,
-        elemsSlide: 2,
-        duration: 150,
-        itemsSelector: '.SlideItMoo_element',
-        itemWidth: 158,
-        showControls:1});
-        },
-
-        });
-        </script>
-
-
-        <script language="javascript" type="text/javascript">
-        function clearText(field)
-        {
-        if (field.defaultValue == field.value) field.value = '';
-        else if (field.value == '') field.value = field.defaultValue;
-        }
-        </script>
+        <script src="assets/js/headroom.min.js"></script>
+        <script src="assets/js/jQuery.headroom.min.js"></script>
+        <script src="assets/js/jquery-1.10.2.js"></script>
+        <script src="assets/js/jquery-ui.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+        <script src="assets/js/jquery.cslider.js"></script>
+        <script src="assets/js/custom.js"></script>
+        <script src="assets/js/combobox.js"></script>
     </head>
     <body>
-
-        <div id="templatemo_site_title_bar_wrapper_outter">
-            <div id="templatemo_site_title_bar_wrapper_inner">
-
-                <div id="templatemo_site_title_bar">
-
-                    <div id="banner_left">
-                        <div id="site_title">
-                            <h1><a href="http://www.templatemo.com/page/1" target="_parent">
-                    FRUIT <span>ART</span>
-                                <span class="tagline">free css template</span>
-                </a></h1>
-                        </div>
-
-                        <div id="templatemo_menu">
-                            <ul>
-                                <li><a href="#" class="current"><span></span>@Messages("hello")</a></li>
-                                <li><a href="http://www.templatemo.com" target="_parent"><span></span>CSS Templates</a></li>
-                                <li><a href="http://www.flashmo.com" target="_parent"><span></span>Flash Stuffs</a></li>
-                                <li><a href="http://www.koflash.com" target="_parent"><span></span>Web Gallery</a></li>
-                                <li><a href="#"><span></span>Contact Us</a></li>
+            <!-- Fixed navbar -->
+        <div class="navbar navbar-inverse navbar-fixed-top headroom" >
+            <div class="container">
+                <div class="navbar-header">
+                        <!-- Button for smallest screens -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+                    <a class="navbar-brand" href="index.html"><img src="assets/images/logo.png" alt="vOne HTML5 template"></a> </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav pull-right">
+                        <li><a href="#order">Pasūtīt</a></li>
+                        <li><a href="#about">Par mums</a></li>
+                        <li class="dropdown active" id="language">
+                            <a href="#" id="lang-chooser" class="dropdown-toggle" data-toggle="dropdown">@Messages("current_lang")<b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/changeLanguage?lang=lv">LV</a></li>
+                                <li><a href="/changeLanguage?lang=ru">RU</a></li>
                             </ul>
-                        </div> <!-- end of menu -->
+                        </li>
+
+                    </ul>
+                </div>
+
+                    <!--/.nav-collapse -->
+            </div>
+        </div>
+            <!-- /.navbar -->
+
+            <!-- Header -->
+        <header id="head">
+            <div class="container">
+                <div class="banner-content">
+                    <div id="da-slider" class="da-slider">
+                        <div class="da-slide">
+                            <h2>Augļu piegāde</h2>
+                            <p>Mēs piegādājam augļus uz Rīgas birojiem.</p>
+                            <div class="da-img"></div>
+                        </div>
+                        <div class="da-slide">
+                            <h2>Bezmaksas izmēģināšana</h2>
+                            <p>Pasūtiet pirmo augļu grozu bezmaksas.</p>
+                            <div class="da-img"></div>
+                        </div>
+                        <div class="da-slide">
+                            <h2>Kvalitāte</h2>
+                            <p>Visi augļi tiek rūpīgi atlasīti.</p>
+                            <div class="da-img"></div>
+                        </div>
+                        <nav class="da-arrows"> <span class="da-arrows-prev"></span> <span class="da-arrows-next"></span> </nav>
                     </div>
+                </div>
+            </div>
+        </header>
+            <!-- /Header -->
 
-                    <div id="banner_right">
-                        <div id="banner_box">
+            <!-- Intro -->
+        <section class="herotxt">
+                <!--<div class="container text-center sectionBox">
+      <h2 >Welcome!</h2>
+      <p class="text-muted"> Nullam ac rhoncus sapien, non gravida purus. Alinon elit imperdiet congue. Integer ultricies<br/>
+        Sed elit imperdiet congue. Integer ultricies sed ligula eget tempus. </p>
+    </div>-->
+            <div class="container sectionBox">
+                <div class="row">
+                    <div class="col-md-9">
+                        <div id="discount">@Messages("discount")</div>
+                        <p>Saņemiet bezmaksas izmēģinājuma grozu! Atstājiet mums savu telefona numuru vai e-pastu un mēs piegādāsim jums izmēģinājuma augļu grozu bezmaksas.</p>
+                    </div>
+                    <div class="col-md-3 btn-download">
+                        <form action="/submitTrial" method="post" id="trialForm">
+                            <input class="form-control" type="text" name="phoneOrEmail" placeholder="Telefona numurs vai e-pasts" onkeydown="if (e.keyCode == 13) {$('#trialForm').submit();}" />
+                            <a href="#button1" id="button-1" onclick="$('#trialForm').submit();" class="btn-u btn-u-lg"><i class="fa fa-gift"></i> Sūtīt pieprasījumu</a>
+                            <input type="submit" style="display: none" />
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+            <!-- /Intro-->
 
-                            <h1>Welcome to Fruit Art</h1>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ultrices neque id augue rhoncus.<br />
-                                    &nbsp;</p>
-                            <div class="button"><a href="#">more</a></div>
-
+            <!-- Highlights - jumbotron -->
+        <div class="jumbotron sectionBox">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-sm-6 highlight">
+                        <div class="h-caption">
+                            <h4><i class="fa fa-dropbox circle" style=" font-size: 30px; margin-top: 3%;"></i>10 darbiniekiem</h4>
+                        </div>
+                        <div class="h-body">
+                            <p>10 āboli, 15 banāni, 5 mandarīni, 5 bumbieri, 10 sezonas augļi.</p>
+                            <span style="font-size: 34px; display:table;">
+                        25 EUR
+                            </span>
                         </div>
                     </div>
-
-                </div> <!-- end of templatemo_site_title_bar  -->
-
-            </div> <!-- end of templatemo_site_title_bar_wrapper_inner -->
-        </div> <!-- end of templatemo_site_title_bar_wrapper_outter  -->
-
-        <div id="templatemo_content">
-
-            <div class="section_w940">
-                <p class="em_text">This <a href="http://www.templatemo.com" target="_parent">CSS template</a> is provided by <a href="http://www.templatemo.com/page/1" target="_parent">templatemo.com</a> for free of charge. Validate <a href="http://validator.w3.org/check?uri=referer">XHTML</a> &amp; <a href="http://jigsaw.w3.org/css-validator/check/referer">CSS</a>. You may download, modify and apply this template for your websites. Credit goes to <a href="http://www.photovaco.com" target="_blank">Free Photos</a> for photos used in this template. Pellentesque eleifend ornare ipsum, eu tincidunt nunc pulvinar tincidunt. Integer vel erat purus, quis pulvinar metus. Phasellus sed orci eros.</p>
-
-                <p>Lorem ipsum dolor sit amet, <a href="#">consectetur</a> adipiscing elit. Quisque nec dictum tortor. Etiam ultrices neque id augue rhoncus in gravida eros dictum. <a href="#">Integer</a> interdum sapien id diam tempor dapibus. Aliquam lobortis nunc risus. Suspendisse sodales massa velit. <a href="#">Quisque</a> odio quam, pulvinar sit amet convallis eget, venenatis ut turpis. <a href="#">Donec</a> ultricies eros et magna viverra venenatis et at arcu. Suspendisse quis tincidunt orci. Nam lobortis varius porttitor. Quisque ut ipsum non tortor laoreet tristique. Sed auctor mollis massa vel aliquet. </p>
-
-            </div>
-
-            <div class="cleaner_h40"></div>
-
-            <div class="section_w940">
-
-                <div id="SlideItMoo_outer">
-                    <div id="SlideItMoo_inner">
-                        <div id="SlideItMoo_items">
-
-                            <div class="SlideItMoo_element">
-                                <a href="#">
-                                    <img src="gallery/thumb/templatemo_image_03.jpg" alt="product" /></a>
-
-                            </div>
-
-                            <div class="SlideItMoo_element">
-                                <a href="#">
-                                    <img src="gallery/thumb/templatemo_image_04.jpg" alt="product" /></a>
-
-                            </div>
-
-                            <div class="SlideItMoo_element">
-                                <a href="#">
-                                    <img src="gallery/thumb/templatemo_image_05.jpg" alt="product" /></a>
-
-                            </div>
-
-                            <div class="SlideItMoo_element">
-                                <a href="#">
-                                    <img src="gallery/thumb/templatemo_image_06.jpg" alt="product" /></a>
-
-                            </div>
-
-                            <div class="SlideItMoo_element">
-                                <a href="#">
-                                    <img src="gallery/thumb/templatemo_image_07.jpg" alt="product" /></a>
-
-                            </div>
-
-                            <div class="SlideItMoo_element">
-                                <a href="#">
-                                    <img src="gallery/thumb/templatemo_image_08.jpg" alt="product" /></a>
-
-                            </div>
-
-                            <div class="SlideItMoo_element">
-                                <a href="#">
-                                    <img src="gallery/thumb/templatemo_image_09.jpg" alt="product" /></a>
-
-                            </div>
-
-                            <div class="SlideItMoo_element">
-                                <a href="#">
-                                    <img src="gallery/thumb/templatemo_image_10.jpg" alt="product" /></a>
-
-                            </div>
-
-                            <div class="SlideItMoo_element">
-                                <a href="#">
-                                    <img src="gallery/thumb/templatemo_image_11.jpg" alt="product" /></a>
-
-                            </div>
-                            <div class="SlideItMoo_element">
-                                <a href="#">
-                                    <img src="gallery/thumb/templatemo_image_12.jpg" alt="product" /></a>
-
-                            </div>
-
+                    <div class="col-md-3 col-sm-6 highlight">
+                        <div class="h-caption">
+                            <h4><i class="fa fa-dropbox circle"></i>20 darbiniekiem</h4>
+                        </div>
+                        <div class="h-body">
+                            <p>20 āboli, 30 banāni, 10 mandarīni, 10 bumbieri, 20 sezonas augļi.</p>
+                            <span style="font-size: 34px; display:table;">
+                        50 EUR
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 highlight">
+                        <div class="h-caption">
+                            <h4><i class="fa fa-dropbox circle" style="font-size: 60px; margin-top: -2%;"></i>30 darbiniekiem</h4>
+                        </div>
+                        <div class="h-body">
+                            <p>30 āboli, 45 banāni, 15 mandarīni, 15 bumbieri, 30 sezonas augļi.</p>
+                            <span style="font-size: 34px; display:table;">
+                        75 EUR
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 highlight">
+                        <div class="h-caption">
+                            <h4><i class="fa fa-pie-chart circle" style="margin-top: 1%;"></i>Jūsu birojam</h4>
+                        </div>
+                        <div class="h-body">
+                            <p>Jūs varat patstāvīgi ievadīt vēlamo augļu daudzumu.</p>
                         </div>
                     </div>
                 </div>
+                    <!-- /row  -->
 
-            </div> <!-- end of product gallery -->
-
-            <div class="cleaner_h40"></div>
-
-            <div class="section_w940">
-
-                <div class="section_w430 margin_r_80">
-
-                    <h2>Lorem ipsum dolor sit</h2>
-
-                    <img class="image_wrapper fr_image" src="images/templatemo_image_01.jpg" alt="fruit" />
-                    <p>Integer nec orci at eros sollicitudin scelerisque semper a erat. Donec tincidunt luctus fringilla. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vulputate nunc a nulla placerat ultrices accumsan urna hendrerit. Nulla laoreet neque ut nisl porttitor <a href="#">condimentum</a>.</p>
-                    <div class="cleaner_h10"></div>
-                    <div class="button"><a href="#">more</a></div>
-
-                </div>
-
-                <div class=" section_w430">
-
-                    <h2>Suspendisse sodales massa </h2>
-
-                    <img class="image_wrapper fr_image" src="images/templatemo_image_02.jpg" alt="tomatoes" />
-                    <p>Duis leo nibh, ultricies ut blandit sit amet, lacinia et sem. <a href="#">Aenean</a> et nulla magna, ut pretium enim. Phasellus tristique auctor pharetra. Mauris tincidunt elit non velit dictum convallis. Vestibulum dui sem, sagittis vitae sodales vel, cursus facilisis est.</p>
-                    <div class="cleaner_h10"></div>
-                    <div class="button"><a href="#">more</a></div>
-
-                </div>
-
-                <div class="cleaner"></div>
             </div>
-
-        </div> <!-- end of content -->
-
-        <div id="templatemo_footer_wrapper">
-
-            <div id="templatemo_footer">
-
-                <div class="section_w210 margin_r_20">
-
-                    <h3>Privacy Policy</h3>
-
-                    <div class="sub_content">
-                        <p>Nullam ultrices tempor nisi, ac egestas diam aliquam a. Ut eleifend semper turpis, id feugiat arcu dignissim eu. Donec mattis adipiscing imperdiet.</p>
+        </div>
+            <!-- container -->
+        <section class="sectionBox" style="height: 42em;" id="order">
+            <div style="text-align: center"><h1 style="margin-top: 10px; margin-bottom: 30px;">Nosūtīt pieprasījumu</h1></div>
+            <div id="form-container">
+                <div id="green-form-container" style="background-color: #64c307; padding: 5%; border-radius: 10px">
+                    <div id="worker-amount">Norādiet darbinieku skaitu</div>
+                    <div id="slider"></div>
+                    <div id="ruler-container">
+                        <ul class="ruler" data-items="10"></ul>
                     </div>
-
+                    <form action="/makeRequest" method="post" id="new_order">
+                        <table align="center" style="width: 100%;" cellpadding="10">
+                            <tr>
+                                <td align="center">
+                                    <input type="number" min="0" max="50" class="form-control fruits" name="green_apples" id="green_apples" value="5" />
+                                    Zaļie āboli
+                                </td>
+                                <td align="center">
+                                    <input type="number" min="0" max="150" class="form-control fruits" name="bananas" id="bananas" value="15" />
+                                    Banāni
+                                </td>
+                                <td align="center">
+                                    <input type="number" min="0" max="50" class="form-control fruits" name="red_apples" id="red_apples" value="5" />
+                                    Sarkanie āboli
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="center">
+                                    <input type="number" min="0" max="50" class="form-control fruits" name="pears" id="pears" value="5" />
+                                    Bumbieri
+                                </td>
+                                <td align="center">
+                                    <input type="number" min="0" max="50" class="form-control fruits" name="mandarines" id="mandarines" value="5" />
+                                    Mandarīni
+                                </td>
+                                <td align="center">
+                                    <input type="number" min="0" max="50" class="form-control fruits" name="season_fruits" id="season_fruits" value="5" />
+                                    Sezonas augļi
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="center" colspan="2">
+                                    <input type="text" class="form-control" name="phoneOrEmail" id="phoneOrEmail" placeholder="Telefona numurs vai e-pasts" style="width: 85%;" onkeydown="if (e.keyCode == 13) {$('#new_order').submit();}" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="center" colspan="2"><input type="submit" value="Pasūtīt" class="form-control fruits" style="width: 15em; height: 3em; background-color: rgb(230, 230, 230);" /></td>
+                                <td align="center"><div id="price"><span style="font-size: 14px; margin-top: 9px; float: left; margin-left: 5px;">Cena:</span>25€</div></td>
+                            </tr>
+                        </table>
+                    </form>
                 </div>
-
-                <div class="section_w210 margin_r_20">
-
-                    <h3>Partners</h3>
-
-                    <div class="sub_content">
-
-                        <ul class="footer_list">
-                            <li><a href="http://www.templatemo.com" target="_parent">Free CSS Templates</a></li>
-                            <li><a href="http://www.flashmo.com" target="_parent">Free Flash Templates</a></li>
-                            <li><a href="http://www.flashmo.com/store" target="_parent">Premium Templates</a></li>
-                            <li><a href="http://www.webdesignmo.com/blog" target="_parent">Web Design Articles</a></li>
-                            <li><a href="http://www.koflash.com" target="_parent">Best Flash Websites</a></li>
-                        </ul>
-
+            </div>
+        </section>
+        <section class="sectionBox">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="heading">
+                            <h2 id="about">Par mums</h2>
+                            <br/>
+                        </div>
+                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. </p>
+                        <blockquote class="blockquote-1">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante. Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid</p>
+                            <small>Someone famous in <cite title="Source Title">Source Title</cite></small> </blockquote>
                     </div>
-
-                </div>
-
-                <div class="section_w210 margin_r_20">
-
-                    <h3>About</h3>
-
-                    <div class="sub_content">
-
-                        <ul class="footer_list">
-                            <li><a href="#">Lorem ipsum dolor</a></li>
-                            <li><a href="#">Cum sociis</a></li>
-                            <li><a href="#">Donec quam</a></li>
-                            <li><a href="#">Nulla consequat</a></li>
-                            <li><a href="#">In enim justo</a></li>
-
-                        </ul>
-
+                    <div class="col-md-6">
+                        <div class="blockquote-box blockquote-info clearfix">
+                            <div class="heading">
+                                <h2>Serviss</h2>
+                                <br/>
+                            </div>
+                            <div class="square pull-left">
+                                <i class="fa fa-car fa-3x circle"></i>
+                            </div>
+                            <h4>
+                        Bezmaksas piegāde</h4>
+                            <p>
+                        Mēs piegādājam augļus bezmaksas uz mājām un birojiem visā Rīgas teritorijā.
+                            </p>
+                        </div>
+                        <div class="blockquote-box blockquote-success clearfix">
+                            <div class="square pull-left">
+                                <i class="fa fa-thumbs-up fa-3x circle"></i>
+                            </div>
+                            <h4>
+                        100% kvalitāte</h4>
+                            <p>
+                        Tikai svaigie un rūpīgi atlasītie augļi
+                            </p>
+                        </div>
+                        <div class="blockquote-box blockquote-primary clearfix">
+                            <div class="square pull-left">
+                                <i class="fa fa-cutlery fa-3x circle"></i>
+                            </div>
+                            <h4>
+                        Augļu grozi izmēģināšanai</h4>
+                            <p>
+                        Izmēģiniet un novērtējiet pirmo augļu grozu pilnīgi bezmaksas.
+                            </p>
+                        </div>
                     </div>
-
                 </div>
-
-                <div class="section_w210">
-
-                    <h3>Customer Care</h3>
-
-                    <div class="sub_content">
-
-                        <ul class="footer_list">
-                            <li><a href="#">Aenean vulputate</a></li>
-                            <li><a href="#">Etiam ultricies</a></li>
-                            <li><a href="#">Nullam quis</a></li>
-                            <li><a href="#">Sed consequat</a></li>
-                            <li><a href="#">Cras dapibus</a></li>
-                        </ul>
+            </div>
+        </section>
+        <footer id="footer" class="top-space">
+            <div class="footer1">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-5 panel">
+                            <h3 class="panel-title">Lates News</h3>
+                            <div class="panel-body">
+                                <p>Lorem ipsum dolor amet, consectetur adipiscing elit. Aenean leo lectus sollicitudin convallis eget libero. Aliquam laoreet tellus ut libero semper, egestas velit malesuada. Sed non risus eget dolor amet vestibulum ullamcorper. Integer feugiat molestie.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 panel contact">
+                            <h3 class="panel-title">Kontaktinformācija</h3>
+                            <div class="panel-body">
+                                <p>Lorem ipsum dolor amet, consectetur adipiscing ipsum dolor.</p>
+                                <ul>
+                                    <li><i class="fa fa-phone"></i>1-123-345-6789</li>
+                                    <li><a href="#"><i class="fa fa-envelope-o"></i> contact@@webthemez.com</a></li>
+                                    <li><i class="fa fa-flag"></i>123 Smith Drive, Baltimore, MD 21212</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-3 panel">
+                            <h3 class="panel-title">Sekojiet mums</h3>
+                            <div class="panel-body">
+                                <p class="follow-me-icons"> <a href=""><i class="fa fa-twitter fa-2"></i></a> <a href=""><i class="fa fa-dribbble fa-2"></i></a> <a href=""><i class="fa fa-github fa-2"></i></a> <a href=""><i class="fa fa-facebook fa-2"></i></a> <a href=""><i class="fa fa-youtube fa-2"></i></a> <a href=""><i class="fa fa-pinterest fa-2"></i></a> </p>
+                            </div>
+                        </div>
                     </div>
-
+                        <!-- /row of panels -->
                 </div>
+            </div>
+            <div class="footer2">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 panel">
+                            <div class="panel-body">
+                                <p class="text-right"> SIA Abc &copy; 2014</p>
+                            </div>
+                        </div>
+                    </div>
+                        <!-- /row of panels -->
+                </div>
+            </div>
+        </footer>
+        <script>
+        $(document).ready(function(){
 
-                <div class="cleaner_h40"></div>
+        $( "#slider" ).slider({
+        step: 10,
+        min: 0,
+        max: 100,
+        value: 10,
+        slide: function( event, ui ) {
+        $("#green_apples").val(ui.value/2);
+        $("#bananas").val(ui.value*1.5);
+        $("#red_apples").val(ui.value/2);
+        $("#pears").val(ui.value/2);
+        $("#mandarines").val(ui.value/2);
+        $("#season_fruits").val(ui.value/2);
+        $("#price").html('<span style="font-size: 14px; margin-top: 9px; float: left; margin-left: 5px;">Cena:</span>' + ui.value*2.5 + "€");
+        }
+        });
 
-                <center>
-        	Copyright © 2048 <a href="#">Your Company Name</a> |
-                    <a href="http://www.iwebsitetemplate.com" target="_parent">Website Templates</a> by <a href="http://www.templatemo.com" target="_parent">Free CSS Templates</a>
-      </center>
+        // Build "dynamic" rulers by adding items
+        $(".ruler[data-items]").each(function() {
+        var ruler = $(this).empty(),
+        len = Number(ruler.attr("data-items")) || 0,
+        item = $(document.createElement("li")),
+        i;
+        for (i = 0; i < len; i++) {
+        ruler.append(item.clone().text(10*(i + 1)));
+        }
+        });
+        // Change the spacing programatically
+        function changeRulerSpacing(spacing) {
+        $(".ruler").
+        css("padding-right", spacing).
+        find("li").
+        css("padding-left", spacing);
+        }
+        $("#spacing").change(function() {
+        changeRulerSpacing($(this).val());
+        });
 
-            </div> <!-- end of footer -->
+        $('#ss').slider({
+        mode: 'v',
+        tipFormatter: function(value){
+        return value + '%';
+        }
+        });
 
-            <div class="cleaner"></div>
-        </div> <!-- end of footer wrapper -->
+        $('a[href="#about"], a[href="#order"]').on('click',function (e) {
+        e.preventDefault();
 
-        <div align=center>This template  downloaded form <a href='http://all-free-download.com/free-website-templates/'>free website templates</a></div></body>
+        var target = this.hash;
+        var $target = $(target);
+
+        $('html, body').stop().animate({
+        'scrollTop': $target.offset().top
+        }, 900, 'swing', function () {
+        window.location.hash = target;
+        });
+        });
+        });
+        </script>
+    </body>
 </html>

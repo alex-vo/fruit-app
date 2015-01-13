@@ -3,8 +3,10 @@
 # ~~~~
 
 # Home page
-GET      /                                      controllers.Application.index()
-POST     /submitTrial                           controllers.Application.submitTrial()
+GET         /                      controllers.Application.index()
+POST        /submitTrial           controllers.Application.submitTrial()
+POST        /makeRequest           controllers.Application.makeRequest()
+GET         /changeLanguage        controllers.Application.changeLanguage(lang: String)
 
 # Map static resources from the /public folder to the /assets URL path
-GET     /*file                                  controllers.Assets.at(path="/public", file)
+GET         /*file                 controllers.Assets.at(path="/public", file)

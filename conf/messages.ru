@@ -1,1 +1,14 @@
-hello=Привет
+new_trial=Новый заказ на пробу
+hello_email=Доброго времени суток,
+new_trial_message=Поступил новый заказ на пробу фруктов.
+new_order_message=Поступил новый заказ.
+phone_or_email=Оставленный контакт (телефон или почта)
+new_order=Новый заказ
+green_apples=Зелёные яблоки
+bananas=Бананы
+red_apples=Красные яблоки
+pears=Груши
+mandarines=Мандарины
+season_fruits=Сезонные фрукты
+discount=Акция!
+current_lang=RU
