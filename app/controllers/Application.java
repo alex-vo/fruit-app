@@ -18,6 +18,7 @@ import java.util.Properties;
 
 public class Application extends Controller {
 
+    private static Integer id = 200000;
     public static Result changeLanguage(String lang){
         changeLang(lang);
         return redirect("/");
@@ -117,7 +118,8 @@ public class Application extends Controller {
                     + "\n " + Messages.get("pears", Lang.get("ru")) + ": " + pears
                     + "\n " + Messages.get("mandarines", Lang.get("ru")) + ": " + mandarines
                     + "\n " + Messages.get("season_fruits", Lang.get("ru")) + ": " + seasonFruits
-                    + "\n " + Messages.get("phone_or_email", Lang.get("ru")) + ": " + phoneOrEmail, "utf-8");
+                    + "\n " + Messages.get("phone_or_email", Lang.get("ru")) + ": " + phoneOrEmail
+                    + "\n " + Messages.get("order_id", Lang.get("ru")) + ": " + ++id, "utf-8");
 
             Transport.send(message);
 
@@ -126,7 +128,7 @@ public class Application extends Controller {
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
-        return ok(thanks_account.render());
+        return ok(thanks_account.render("#" + id));
     }
 
 }

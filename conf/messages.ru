@@ -12,3 +12,4 @@ mandarines=Мандарины
 season_fruits=Сезонные фрукты
 discount=Акция!
 current_lang=RU
+order_id=ID заказа
