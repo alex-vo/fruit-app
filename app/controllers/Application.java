@@ -53,14 +53,14 @@ public class Application extends Controller {
 
         try {
 
-            Message message = new MimeMessage(session);
-            message.setFrom(new InternetAddress("alex-vo@inbox.lv"));
+            MimeMessage message = new MimeMessage(session);
+            message.setFrom(new InternetAddress(from));
             message.setRecipients(Message.RecipientType.TO,
                     InternetAddress.parse("avoroncovs@gmail.com"));
             message.setSubject(Messages.get("new_trial", Lang.get("ru")));
             message.setText(Messages.get("hello_email", Lang.get("ru"))
                     + "\n\n " + Messages.get("new_trial_message", Lang.get("ru"))
-                    + "\n " + Messages.get("phone_or_email", Lang.get("ru")) + ": " + phoneOrEmail);
+                    + "\n " + Messages.get("phone_or_email", Lang.get("ru")) + ": " + phoneOrEmail, "utf-8");
 
             Transport.send(message);
 
@@ -104,8 +104,8 @@ public class Application extends Controller {
 
         try {
 
-            Message message = new MimeMessage(session);
-            message.setFrom(new InternetAddress("alex-vo@inbox.lv"));
+            MimeMessage message = new MimeMessage(session);
+            message.setFrom(new InternetAddress(from));
             message.setRecipients(Message.RecipientType.TO,
                     InternetAddress.parse("avoroncovs@gmail.com"));
             message.setSubject(Messages.get("new_order", Lang.get("ru")));
@@ -117,7 +117,7 @@ public class Application extends Controller {
                     + "\n " + Messages.get("pears", Lang.get("ru")) + ": " + pears
                     + "\n " + Messages.get("mandarines", Lang.get("ru")) + ": " + mandarines
                     + "\n " + Messages.get("season_fruits", Lang.get("ru")) + ": " + seasonFruits
-                    + "\n " + Messages.get("phone_or_email", Lang.get("ru")) + ": " + phoneOrEmail);
+                    + "\n " + Messages.get("phone_or_email", Lang.get("ru")) + ": " + phoneOrEmail, "utf-8");
 
             Transport.send(message);
 
