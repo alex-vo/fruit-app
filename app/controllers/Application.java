@@ -56,8 +56,10 @@ public class Application extends Controller {
 
             MimeMessage message = new MimeMessage(session);
             message.setFrom(new InternetAddress(from));
-            message.setRecipients(Message.RecipientType.TO,
+            message.addRecipients(Message.RecipientType.TO,
                     InternetAddress.parse("avoroncovs@gmail.com"));
+            message.addRecipients(Message.RecipientType.TO,
+                    InternetAddress.parse("kristiansvunge@gmail.com"));
             message.setSubject(Messages.get("new_trial", Lang.get("ru")), "utf-8");
             message.setText(Messages.get("hello_email", Lang.get("ru"))
                     + "\n\n " + Messages.get("new_trial_message", Lang.get("ru"))
@@ -107,8 +109,10 @@ public class Application extends Controller {
 
             MimeMessage message = new MimeMessage(session);
             message.setFrom(new InternetAddress(from));
-            message.setRecipients(Message.RecipientType.TO,
+            message.addRecipients(Message.RecipientType.TO,
                     InternetAddress.parse("avoroncovs@gmail.com"));
+            message.addRecipients(Message.RecipientType.TO,
+                    InternetAddress.parse("kristiansvunge@gmail.com"));
             message.setSubject(Messages.get("new_order", Lang.get("ru")), "utf-8");
             message.setText(Messages.get("hello_email", Lang.get("ru"))
                     + "\n\n " + Messages.get("new_order_message", Lang.get("ru"))
