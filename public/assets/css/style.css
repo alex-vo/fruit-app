@@ -850,3 +850,8 @@ background:rgba(0,0,0,0.80)	;
 #language{
 	background-color: #f4b905;
 }
+
+.phone td{
+	font-size: 36px;
+	white-space: pre;
+}
